@@ -1,0 +1,6 @@
+/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/obj/Debug/net7.0/FormsApp.csproj.AssemblyReference.cache
+/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/obj/Debug/net7.0/FormsApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/obj/Debug/net7.0/FormsApp.AssemblyInfoInputs.cache
+/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/obj/Debug/net7.0/FormsApp.AssemblyInfo.cs
+/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/obj/Debug/net7.0/FormsApp.csproj.CoreCompileInputs.cache
+/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/obj/Debug/net7.0/FormsApp.MvcApplicationPartsAssemblyInfo.cache

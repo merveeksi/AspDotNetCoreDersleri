@@ -1,12 +1,12 @@
 is_global = true
 build_property.TargetFramework = net7.0
 build_property.TargetPlatformMinVersion = 
-build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
-build_property.InvariantGlobalization = false
+build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property._SupportedPlatformList = browser
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FormsApp
 build_property.RootNamespace = FormsApp
 build_property.ProjectDir = /Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/
@@ -16,34 +16,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/App.razor]
-build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
+[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
+[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-pgedkwdmpb
-
-[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-tki0q2q4nw
+[/Users/pc/Desktop/AspDotNetCoreDersleri/FormsApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-qf9lib2rlo
