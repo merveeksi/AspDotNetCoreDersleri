@@ -11,6 +11,7 @@ public class HomeController : Controller
     {
     }
 
+    [HttpGet]
     public IActionResult Index(string searchString, string category)
     {
         var Products = Repository.Products;
@@ -34,8 +35,17 @@ public class HomeController : Controller
         return View(model);
     }
 
-    public IActionResult Privacy()
+    [HttpGet]
+    public IActionResult Create()
+    {
+        ViewBag.Categories = Repository.Categories;
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Create(Product model)
     {
         return View();
     }
 }
+
