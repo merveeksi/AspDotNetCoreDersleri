@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model ProductModelView
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -8,7 +8,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
-                    <select name="category" class="form-select" asp-items="@ViewBag.Categories">
+                    <select 
+                    name="category" 
+                    class="form-select" 
+                    asp-items="@(new SelectList(Repository.Categories, "CategoryId", "Name", Model.SelectedCategory))">
                         <option value="0">Hepsi</option>
                     </select>
                 </div>
@@ -22,10 +25,10 @@
 <table class="table table-bordered table table-striped">
     <thead>
     <tr>
-        <th style="width: 100px">@Html.DisplayNameFor(m => m.ProductId)</th>
-        <th style="width: 100px">@Html.DisplayNameFor(m => m.Image)</th>
-        <th>@Html.DisplayNameFor(m => m.Name)</th>
-        <th style="width: 100px">@Html.DisplayNameFor(m => m.Price)</th><td style="width: 100px"></td>
+        <th style="width: 100px">@Html.DisplayNameFor(m => m.ProductId[0].ProductId)</th>
+        <th style="width: 100px">@Html.DisplayNameFor(m => m.ProductId[0].Image)</th>
+        <th>@Html.DisplayNameFor(m => m.ProductId[0].Name)</th>
+        <th style="width: 100px">@Html.DisplayNameFor(m => m.ProductId[0].Price)</th><td style="width: 100px"></td>
         <th style="width: 130px"></th>
     </tr>
     </thead>
