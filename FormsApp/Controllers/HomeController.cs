@@ -25,7 +25,7 @@ public class HomeController : Controller
             products = products.Where(p => p.CategoryId ==int.Parse(category)).ToList();
         }
 
-        // ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name", category)
+        // ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name", category);
 
         var model = new ProductViewModel {
             Products products,
@@ -38,7 +38,7 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Create()
     {
-        ViewBag.Categories = Repository.Categories;
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View();
     }
 
