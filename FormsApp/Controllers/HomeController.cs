@@ -18,20 +18,22 @@ public class HomeController : Controller
     public IActionResult Index(string searchString, string category)
     {
         var products = Repository.Products;
-       
+
         if (!String.IsNullOrEmpty(searchString))
         {
             ViewBag.SearchString = searchString;
-            products = products.Where(p => p.Name!.ToLower().Contains(searchString)).ToList(); // ! "hata olmayacağına söz verme" ya da 'Product.cs'de name olanın karşısına "null!" getirirsin.
+            products = products.Where(p => p.Name!.ToLower().Contains(searchString))
+                .ToList(); // ! "hata olmayacağına söz verme" ya da 'Product.cs'de name olanın karşısına "null!" getirirsin.
         }
-        if (!String.IsNullOrEmpty(category) && category !="0")
+
+        if (!String.IsNullOrEmpty(category) && category != "0")
         {
-            products = products.Where(p => p.CategoryId ==int.Parse(category)).ToList();
+            products = products.Where(p => p.CategoryId == int.Parse(category)).ToList();
         }
 
         // ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name", category);
 
-        var model = new ProductViewModel 
+        var model = new ProductViewModel
         {
             Products = products,
             Categories = Repository.Categories,
@@ -58,39 +60,43 @@ public class HomeController : Controller
         if (imageFile != null)
         {
             var allowedExtensions = new[] { ".jpeg", ".jpg", ".png" };
-            extension = Path.GetExtension(imageFile.FileName);       //uzantıyı bulma(jpg...)
-            
+            extension = Path.GetExtension(imageFile.FileName); //uzantıyı bulma(jpg...)
+
             if (!allowedExtensions.Contains(extension))
             {
                 ModelState.AddModelError("", "Geçerli bir resim seçiniz");
             }
         }
-        
+
         if (ModelState.IsValid)
         {
             if (imageFile != null)
             {
-                var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}");  //yeni bir isim tanımlama
+                var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}"); //yeni bir isim tanımlama
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomFileName);
-                using(var stream = new FileStream(path, FileMode.Create))
+                using (var stream = new FileStream(path, FileMode.Create))
                 {
                     await imageFile.CopyToAsync(stream);
                 }
+
                 model.Image = randomFileName;
                 model.ProductId = Repository.Products.Count + 1;
                 Repository.CreateProduct(model);
                 return RedirectToAction("Index");
             }
         }
+
         ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View(model);
     }
+
     public string extension { get; set; }
+
     public IActionResult Edit(int? id)
     {
         if (id == null)
         {
-            return NotFound();    //404 sayfasına yönlendirme
+            return NotFound(); //404 sayfasına yönlendirme
         }
 
         var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
@@ -98,6 +104,7 @@ public class HomeController : Controller
         {
             return NotFound();
         }
+
         ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View(entity);
     }
@@ -114,10 +121,10 @@ public class HomeController : Controller
         {
             if (imageFile != null)
             {
-                var extension = Path.GetExtension(imageFile.FileName);       //uzantıyı bulma(jpg...)
-                var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}");  //yeni bir isim tanımlama
+                var extension = Path.GetExtension(imageFile.FileName); //uzantıyı bulma(jpg...)
+                var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}"); //yeni bir isim tanımlama
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomFileName);
-                
+
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
                     await imageFile.CopyToAsync(stream);
@@ -125,9 +132,11 @@ public class HomeController : Controller
 
                 model.Image = randomFileName;
             }
+
             Repository.EditProduct(model);
             return RedirectToAction("Index");
         }
+
         ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View(model);
     }
@@ -138,7 +147,25 @@ public class HomeController : Controller
         {
             return NotFound();
         }
+
         var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+        if (entity == null)
+        {
+            return NotFound();
+        }
+
+        return View("DeleteConfirm", entity);
+    }
+
+    [HttpPost]
+    public IActionResult Delete(int? id, int ProductId)
+    {
+        if (id != ProductId)
+        {
+            return NotFound();
+        }
+
+        var entity = Repository.Products.FirstOrDefault(p => p.ProductId == ProductId);
         if (entity == null)
         {
             return NotFound();
