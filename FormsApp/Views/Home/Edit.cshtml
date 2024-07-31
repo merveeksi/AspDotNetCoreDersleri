@@ -1,0 +1,41 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Edit";
+}
+@* enctype, resmi siteye eklesin diye koyduk *@
+<form aasp-controller="Home" asp-action="Edit" class="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control">
+        <span asp-validation-for="Price"></span>
+    </div>
+
+    @* site üzerinden fotoğraf ekleme *@
+    <div class="input-group mb-3">
+        <input type="file" name="imageFile" id="imageFile" class="form-control">
+    </div>
+    <div>
+        @* kaydetmeden önce resmi görmek için *@
+        <img src="~/img/@Model.Image" alt="" style="width: 100px;">
+        <input type="hidden" asp-name="@Model.Image">
+    </div>
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label"></label>
+        <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">
+            <option value="">Hepsi</option>
+        </select>
+        <span asp-validation-for="CategoryId"></span>
+    </div>
+    <div class="mb-3 form-check"></div>
+    <input type="checkbox" name="IsActive" id="IsActive" class="form-check-label">
+    <label for="IsActive" class="form-check-label">IsActive</label>
+    <span asp-validation-for="IsActive"></span>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

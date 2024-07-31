@@ -1,4 +1,11 @@
 ﻿@model ProductViewModel
+
+@functions {
+    public abstract class prd
+    {
+        public static object ProductId { get; set; }
+    }
+}
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -47,7 +54,7 @@
                 <input type="checkbox" asp-for="@Model.Products[i].IsActive">
             </td>
             <td>
-                <a href="" class="btn btn-sm btn-primary">Edit</a>
+                <a href="/Home/Edit/@prd.ProductId" class="btn btn-sm btn-primary">Edit</a>
                 <a href="" class="btn btn-sm btn-danger">Delete</a>
             </td>
         </tr>
