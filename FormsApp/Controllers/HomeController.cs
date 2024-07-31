@@ -173,5 +173,15 @@ public class HomeController : Controller
         Repository.DeleteProduct(entity);
         return RedirectToAction("Index");
     }
+
+    public IActionResult EditProducts(List<Product> Product)
+    {
+        foreach (var product in Product)
+        {
+            Repository.EditIsActive(product);
+        }
+        return RedirectToAction("Index");
+
+    }
 }
 

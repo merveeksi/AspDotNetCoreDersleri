@@ -26,6 +26,7 @@
         </div>
     </form>
 </div>
+<form asp-action="EditProducts" method="post">
 <table class="table table-bordered table table-striped">
     <thead>
     <tr>
@@ -33,6 +34,7 @@
         <th style="width: 100px">@Html.DisplayNameFor(m => m.Image)</th>
         <th>@Html.DisplayNameFor(m => m.Name)</th>
         <th style="width: 100px">@Html.DisplayNameFor(m => m.Price)</th><td style="width: 100px"></td>
+        <td></td>
         <th style="width: 130px"></th>
     </tr>
     </thead>
@@ -64,3 +66,4 @@
 </table>
 
 <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
