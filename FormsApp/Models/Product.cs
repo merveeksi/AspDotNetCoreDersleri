@@ -12,14 +12,13 @@ public class Product
 
     [Required(ErrorMessage = "Boş Geçilemez")] //zorunlu alan
     [Display(Name = "Urun Adı")]
-    public string Name { get; set; } 
+    public string? Name { get; set; } 
     
     [Required]
     [Range(0,300000)]
     [Display(Name = "Fiyat")]
     public decimal? Price { get; set; } //parasal işlemlerde decimal kullanmak daha iyi
     
-    [Required]
     [Display(Name = "Resim")]
     public string Image { get; set; } = string.Empty; // ? = string.Empty
 
