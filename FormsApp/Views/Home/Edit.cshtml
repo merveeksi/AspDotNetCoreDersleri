@@ -2,9 +2,10 @@
 @{
     ViewData["Title"] = "Edit";
 }
-@* enctype, resmi siteye eklesin diye koyduk *@
-<form aasp-controller="Home" asp-action="Edit" class="post" enctype="multipart/form-data">
+
+<form asp-controller="Home" asp-action="Edit" class="post" enctype="multipart/form-data">
     <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="ProductId"> 
     <div class="mb-3">
         <label asp-for="Name" class="form-label"></label>
         <input asp-for="Name" class="form-control">
@@ -16,12 +17,10 @@
         <span asp-validation-for="Price"></span>
     </div>
 
-    @* site üzerinden fotoğraf ekleme *@
     <div class="input-group mb-3">
         <input type="file" name="imageFile" id="imageFile" class="form-control">
     </div>
     <div>
-        @* kaydetmeden önce resmi görmek için *@
         <img src="~/img/@Model.Image" alt="" style="width: 100px;">
         <input type="hidden" asp-name="@Model.Image">
     </div>

@@ -98,5 +98,35 @@ public class HomeController : Controller
         ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View(entity);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit(int id, Product model, IFormFile? imageFile)
+    {
+        if (id != model.ProductId)
+        {
+            return NotFound();
+        }
+
+        if (ModelState.IsValid)
+        {
+            if (imageFile != null)
+            {
+                var extension = Path.GetExtension(imageFile.FileName);       //uzantıyı bulma(jpg...)
+                var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}");  //yeni bir isim tanımlama
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomFileName);
+                
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
+
+                model.Image = randomFileName;
+            }
+            Repository.EditProduct(model);
+            return RedirectToAction("Index");
+        }
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+        return View(model);
+    }
 }
 
