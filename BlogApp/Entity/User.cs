@@ -9,4 +9,5 @@ public class User
     public List<Post> Posts { get; set; } = new List<Post>();
     
     public List<Comment> Comments { get; set; } = new List<Comment>();
+   
 }
