@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dDdbvO3zuhXTncS2AJOEaUPicXWjGAyoIOUAbARa5GdjEW2/iEiXkLpHkqaCvJObUkNChqNMzeSgOHih6hxfrw==",
+  "dgSpecHash": "3kk2RyJtXyhEZVqDEpvXKLMMpTDkjnzwJwcgEoSIPP9qyqJS1RBThh3AV/zrHjIY7u6z/XBQOUtoxbZjxeVa3A==",
   "success": true,
   "projectFilePath": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/BlogApp.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,8 @@
     "/Users/pc/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/pc/.nuget/packages/mysqlconnector/2.2.5/mysqlconnector.2.2.5.nupkg.sha512",
+    "/Users/pc/.nuget/packages/pomelo.entityframeworkcore.mysql/7.0.0/pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "/Users/pc/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/pc/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
     "/Users/pc/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
