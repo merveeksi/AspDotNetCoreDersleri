@@ -12,14 +12,14 @@ public static class SeedData
         {
             if (context.Database.GetPendingMigrations().Any())
                 context.Database.Migrate();
-            
+
             if (!context.Tags.Any())
                 context.Tags.AddRange(
-                    new Tag{ Text = "Web Programlama"},
-                    new Tag{ Text = "Backend"},
-                    new Tag{ Text = "Frontend"},
-                    new Tag{ Text = "Fullstack"},
-                    new Tag{ Text = "PHP"});
+                    new Tag { Text = "Web Programlama" },
+                    new Tag { Text = "Backend" },
+                    new Tag { Text = "Frontend" },
+                    new Tag { Text = "Fullstack" },
+                    new Tag { Text = "PHP" });
             context.SaveChanges();
         }
 
@@ -59,11 +59,7 @@ public static class SeedData
                     PublisedOn = DateTime.Now.AddDays(-5),
                     Tags = context.Tags.Take(4).ToList(),
                     User = context.Users.FirstOrDefault()
-                };
-                
-                
-                
-        {
-            
-        }
+                });
+        context.SaveChanges();
+    }
 }
