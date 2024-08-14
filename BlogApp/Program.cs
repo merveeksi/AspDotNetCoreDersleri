@@ -15,6 +15,8 @@ builder.Services.AddScoped<IPostRepository, EfCoreRepository>();
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 SeedData.SeedDatabase(app);
 
 app.MapDefaultControllerRoute(); //controller route

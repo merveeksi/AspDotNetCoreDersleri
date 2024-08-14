@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwroot\css\" />
+    <Folder Include="wwroot\js\" />
+    <Folder Include="wwroot\lib\" />
+  </ItemGroup>
+
 </Project>
