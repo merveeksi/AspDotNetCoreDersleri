@@ -1,24 +1,22 @@
+using BlogApp.Data.Abstract;
+using BlogApp.Data.Concrete;
 using BlogApp.Data.Concrete.EfCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<BlogContext>(options =>
-{
-    var config = builder.Configuration; 
-    var connectionString = config.GetConnectionString("mysql_connection"); 
-    //options.UseSqlite(connectionString); 
-    
-    var version = new MySqlServerVersion(new Version(9, 0, 1));
-    options.UseMySql(connectionString, version);
+{ options.UseSqlite(builder.Configuration["ConnectionStrings:Sql_connection"]); 
 });
 
+builder.Services.AddScoped<IPostRepository, EfCoreRepository>();
 
 var app = builder.Build();
 
 SeedData.SeedDatabase(app);
 
-app.MapGet("/", () => "Hello World!");
+app.MapDefaultControllerRoute(); //controller route
 
 app.Run();

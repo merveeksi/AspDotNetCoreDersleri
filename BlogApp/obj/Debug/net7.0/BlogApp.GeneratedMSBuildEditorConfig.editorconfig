@@ -15,3 +15,11 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp
 build_property._RazorSourceGeneratorDebug = 
+
+[/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Posts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

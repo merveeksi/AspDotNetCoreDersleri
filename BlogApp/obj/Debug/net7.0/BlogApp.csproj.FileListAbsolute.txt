@@ -61,5 +61,5 @@
 /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/obj/Debug/net7.0/BlogApp.pdb
 /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/obj/Debug/net7.0/BlogApp.genruntimeconfig.cache
 /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/obj/Debug/net7.0/ref/BlogApp.dll
-/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/bin/Debug/net7.0/MySqlConnector.dll
-/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/obj/Debug/net7.0/BlogApp.RazorAssemblyInfo.cache
+/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/obj/Debug/net7.0/BlogApp.RazorAssemblyInfo.cs
