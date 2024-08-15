@@ -5,6 +5,10 @@
     {
       "library": "bootstrap@5.3.3",
       "destination": "wwroot/lib/bootstrap"
+    },
+    {
+      "library": "bootstrap-icons@1.11.3",
+      "destination": "wwroot/lib/bootstrap-icons"
     }
   ]
 }

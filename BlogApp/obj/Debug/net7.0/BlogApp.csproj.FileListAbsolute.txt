@@ -64,3 +64,4 @@
 /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/obj/Debug/net7.0/BlogApp.RazorAssemblyInfo.cache
 /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/obj/Debug/net7.0/BlogApp.RazorAssemblyInfo.cs
 /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/bin/Debug/net7.0/libman.json
+/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/bin/Debug/net7.0/wwroot/lib/bootstrap-icons/font/bootstrap-icons.json

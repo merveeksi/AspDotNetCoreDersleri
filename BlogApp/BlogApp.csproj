@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwroot\css\" />
     <Folder Include="wwroot\js\" />
     <Folder Include="wwroot\lib\" />
   </ItemGroup>
