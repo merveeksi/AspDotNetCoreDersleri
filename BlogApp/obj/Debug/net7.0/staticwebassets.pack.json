@@ -1,0 +1,225 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/img/1.jpg",
+      "PackagePath": "staticwebassets/img/1.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/img/2.jpg",
+      "PackagePath": "staticwebassets/img/2.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/img/3.jpg",
+      "PackagePath": "staticwebassets/img/3.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/img/avatar.jpg",
+      "PackagePath": "staticwebassets/img/avatar.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/img/p1.jpg",
+      "PackagePath": "staticwebassets/img/p1.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/img/p2.jpg",
+      "PackagePath": "staticwebassets/img/p2.jpg"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/wwwroot/lib/bootstrap/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.BlogApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.BlogApp.props",
+      "PackagePath": "build\\BlogApp.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.BlogApp.props",
+      "PackagePath": "buildMultiTargeting\\BlogApp.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.BlogApp.props",
+      "PackagePath": "buildTransitive\\BlogApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
