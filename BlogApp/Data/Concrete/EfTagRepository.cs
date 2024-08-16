@@ -4,20 +4,20 @@ using BlogApp.Entity;
 
 namespace BlogApp.Data.Concrete;
 
-public class EfCoreRepository: IPostRepository
+public class EfTagRepository: ITagRepository
 {
         private BlogContext _context;
         
-        public EfCoreRepository(BlogContext context)
+        public EfTagRepository(BlogContext context)
         {
                 _context = context; //context nesnesi oluşturuldu
         }
         
-        public IQueryable<Post> Posts => _context.Posts;
+        public IQueryable<Tag> Tags => _context.Tags;
 
-        public void CreatePost(Post post)
+        public void CreateTag(Tag tag)
         {
-                _context.Posts.Add(post); //post eklemek için
+                _context.Tags.Add(tag); //post eklemek için
                 _context.SaveChanges(); //ekleme işlemini kaydetmek için
         }
 }

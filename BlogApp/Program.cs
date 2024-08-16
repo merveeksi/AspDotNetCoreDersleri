@@ -11,7 +11,8 @@ builder.Services.AddDbContext<BlogContext>(options =>
 { options.UseSqlite(builder.Configuration["ConnectionStrings:Sql_connection"]); 
 });
 
-builder.Services.AddScoped<IPostRepository, EfCoreRepository>();
+builder.Services.AddScoped<IPostRepository, EfPostRepository>();
+builder.Services.AddScoped<ITagRepository, EfTagRepository>();
 
 var app = builder.Build();
 
