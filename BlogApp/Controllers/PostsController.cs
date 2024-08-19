@@ -17,11 +17,19 @@ public class PostsController : Controller
         _postRepository = postRepository;
     }
     
-    public IActionResult Index()
+    public async Task<IActionResult> Index(string tag)
     {
+        var posts = _postRepository.Posts; 
+        if (!string.IsNullOrEmpty(tag)) //tag filtreleme
+        {
+            return View(new PostsViewModel
+            {
+                Posts = posts.Where(x => x.Tags.Any(t => t.Url == tag)).ToList() //her ulaştığımız postun tag'lerini kontrol ediyoruz  //any metodu ile tag'lerin içindeki url'leri kontrol ediyoruz
+            });
+        }
         return View(new PostsViewModel
         {
-            Posts = _postRepository.Posts.ToList()
+            Posts = await posts.ToListAsync() //ya bütün postları getir ya da filtreleme yap
         });
     }
     
