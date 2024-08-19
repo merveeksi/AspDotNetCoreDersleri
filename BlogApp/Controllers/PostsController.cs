@@ -11,18 +11,16 @@ public class PostsController : Controller
     private ITagRepository _tagRepository;
     
     //Inject yöntemiyle nesne oluşturma
-    public PostsController(IPostRepository postRepository, ITagRepository tagRepository)
+    public PostsController(IPostRepository postRepository)
     {
         _postRepository = postRepository;
-        _tagRepository = tagRepository;
     }
     
     public IActionResult Index()
     {
         return View(new PostsViewModel
         {
-            Posts = _postRepository.Posts.ToList(),
-            Tags = _tagRepository.Tags.ToList()
+            Posts = _postRepository.Posts.ToList()
         });
     }
 }

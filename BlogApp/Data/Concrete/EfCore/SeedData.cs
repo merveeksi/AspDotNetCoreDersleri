@@ -37,7 +37,7 @@ public static class SeedData
                     Title = "ASP.NET Core 7.0",
                     Content = "ASP.NET Core 7.0 hakkında bilgiler",
                     IsActive = true,
-                    PublisedOn = DateTime.Now.AddDays(-10),
+                    PublishedOn = DateTime.Now.AddDays(-10),
                     Tags = context.Tags.Take(3).ToList(),
                     Image = "1.jpg",
                     UserId =1
@@ -47,7 +47,7 @@ public static class SeedData
                     Title = "Entity Framework Core 7.0",
                     Content = "Entity Framework Core 7.0 hakkında bilgiler",
                     IsActive = true,
-                    PublisedOn = DateTime.Now.AddDays(-20),
+                    PublishedOn = DateTime.Now.AddDays(-20),
                     Tags = context.Tags.Take(2).ToList(),
                     Image = "2.jpg",
                     UserId = 1
@@ -59,7 +59,7 @@ public static class SeedData
                     Title = "Blazor",
                     Content = "Blazor hakkında bilgiler",
                     IsActive = true,
-                    PublisedOn = DateTime.Now.AddDays(-5),
+                    PublishedOn = DateTime.Now.AddDays(-5),
                     Tags = context.Tags.Take(4).ToList(),
                     Image = "3.jpg",
                     UserId = 1

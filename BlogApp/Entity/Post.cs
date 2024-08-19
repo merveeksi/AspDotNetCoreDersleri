@@ -10,7 +10,7 @@ public class Post
     
     public string? Image { get; set; }
 
-    public DateTime PublisedOn { get; set; }
+    public DateTime PublishedOn { get; set; }
 
     public bool IsActive { get; set; }
 
@@ -21,4 +21,5 @@ public class Post
     public List<Tag> Tags { get; set; } = new List<Tag>();
     
     public List<Comment> Comments { get; set; } = new List<Comment>();
+    
 }
