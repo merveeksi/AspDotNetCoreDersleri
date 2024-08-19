@@ -15,18 +15,18 @@ public static class SeedData
 
             if (!context.Tags.Any())
                 context.Tags.AddRange(
-                    new Tag { Text = "Web Programlama", Url = "web-programlama"},
-                    new Tag { Text = "Backend", Url = "backend"},
-                    new Tag { Text = "Frontend", Url = "frontend"},
-                    new Tag { Text = "Fullstack", Url = "fullstack"},
-                    new Tag { Text = "PHP", Url = "php"});
+                    new Tag { Text = "Web Programlama", Url = "web-programlama", Color= TagColors.warning},
+                    new Tag { Text = "Backend", Url = "backend", Color= TagColors.primary},
+                    new Tag { Text = "Frontend", Url = "frontend", Color= TagColors.success},
+                    new Tag { Text = "Fullstack", Url = "fullstack", Color= TagColors.danger},
+                    new Tag { Text = "PHP", Url = "php", Color= TagColors.secondary});
             context.SaveChanges();
         }
 
         if (!context.Users.Any())
             context.Users.AddRange(
                 new User { UserName = "Merve Ekşi" },
-                new User { UserName = "Alp Üstün" },
+                new User { UserName = "Alp Giray Üstün" },
                 new User { UserName = "Eylül Kırmmızıyüz" });
         context.SaveChanges();
 
