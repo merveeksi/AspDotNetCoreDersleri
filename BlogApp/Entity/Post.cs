@@ -8,6 +8,8 @@ public class Post
 
     public string? Content { get; set; }
     
+    public string? Url { get; set; }
+    
     public string? Image { get; set; }
 
     public DateTime PublishedOn { get; set; }
@@ -21,5 +23,7 @@ public class Post
     public List<Tag> Tags { get; set; } = new List<Tag>();
     
     public List<Comment> Comments { get; set; } = new List<Comment>();
+    
+    
     
 }
