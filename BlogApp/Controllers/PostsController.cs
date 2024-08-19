@@ -37,7 +37,9 @@ public class PostsController : Controller
     {
         return View (await _postRepository
                 .Posts
-                .Include(x => x.Tags)
+                .Include(x => x.Tags) //tag'leri getir
+                .Include(x=>x.Comments) //yorumları getir
+                .ThenInclude(x=>x.User) //yorumun kullanıcısını getir
                 .FirstOrDefaultAsync(p => p.Url == url));
         
     }

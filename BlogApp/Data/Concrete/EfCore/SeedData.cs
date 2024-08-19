@@ -25,9 +25,9 @@ public static class SeedData
 
         if (!context.Users.Any())
             context.Users.AddRange(
-                new User { UserName = "Merve Ekşi" },
-                new User { UserName = "Alp Giray Üstün" },
-                new User { UserName = "Eylül Kırmmızıyüz" });
+                new User { UserName = "Merve Ekşi", Image= "p1.jpg"},
+                new User { UserName = "Alp Giray Üstün", Image = "p2.jpg"},
+                new User { UserName = "Eylül Kırmmızıyüz", Image= "p1.jpg" });
         context.SaveChanges();
 
         if (!context.Posts.Any())
@@ -41,7 +41,18 @@ public static class SeedData
                     PublishedOn = DateTime.Now.AddDays(-10),
                     Tags = context.Tags.Take(3).ToList(),
                     Image = "1.jpg",
-                    UserId =1
+                    UserId =1,
+                    Comments = new List<Comment>{
+                        new Comment {Text = "Çok güzel bir kurs", 
+                            PublishedOn = new DateTime(),
+                            UserId = 1},
+                            new Comment {Text = "Temelimi iyi atabildiğim bir kurs", 
+                            PublishedOn = new DateTime(),
+                            UserId = 2},
+                            new Comment {Text = "Herkese tavsiye ederim", 
+                            PublishedOn = new DateTime(),
+                            UserId = 3 }
+                    } //yorum eklemek için
                 },
                 new Post
                 {
