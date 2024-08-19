@@ -1,0 +1,23 @@
+@using BlogApp.Models
+@using BlogApp.ViewComponents
+@model Post
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="bg-white p-4">
+            <h1 class="h4 mb-4">@Model.Title</h1>
+            <div class="tag">
+                <a href="#" class="badge bu-primary bg-opacity-10 text-primary mb-2 fw-bold">Asp.Net</a>
+                <a href="#" class="badge bu-primary bg-opacity-10 text-primary mb-2 fw-bold">Blazor</a>
+            </div>
+            <img src="~/img/@Model.Image" class="img-fluid rounded" alt="">
+            <div>
+                @Model.Content
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <vc:tags-menu></vc:tags-menu>
+        <vc:new-posts></vc:new-posts>
+    </div>
+</div>
