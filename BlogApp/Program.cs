@@ -27,7 +27,7 @@ app.MapDefaultControllerRoute(); //controller route
 
 app.MapControllerRoute(
     name: "post_details",
-    pattern: "posts/{url}",
+    pattern: "posts/Details/{url}",
     defaults: new { controller = "Posts", action = "Details" });
 
 app.MapControllerRoute(

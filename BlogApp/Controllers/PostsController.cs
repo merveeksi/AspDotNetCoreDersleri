@@ -43,4 +43,11 @@ public class PostsController : Controller
                 .FirstOrDefaultAsync(p => p.Url == url));
         
     }
+    
+    public IActionResult AddComment(int PostId, string UserName, string Text)
+    {
+       // _postRepository.AddComment(PostId, UserName, Text);
+       // return RedirectToAction("Details", new { url = _postRepository.Posts.FirstOrDefault(x => x.Id == PostId).Url });
+       return View();
+    }
 }
