@@ -44,13 +44,13 @@ public static class SeedData
                     UserId =1,
                     Comments = new List<Comment>{
                         new Comment {Text = "Çok güzel bir kurs", 
-                            PublishedOn = new DateTime(),
+                            PublishedOn = DateTime.Now.AddDays(-10),
                             UserId = 1},
                             new Comment {Text = "Temelimi iyi atabildiğim bir kurs", 
-                            PublishedOn = new DateTime(),
+                            PublishedOn = DateTime.Now.AddDays(-20),
                             UserId = 2},
                             new Comment {Text = "Herkese tavsiye ederim", 
-                            PublishedOn = new DateTime(),
+                            PublishedOn = DateTime.Now.AddDays(-30),
                             UserId = 3 }
                     } //yorum eklemek için
                 },
