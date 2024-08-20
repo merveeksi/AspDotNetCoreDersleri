@@ -42,7 +42,6 @@
                         <h4 class="mb-3">Yorum Ekle</h4>
                         <form action="/posts/AddComment" method="post">      @* formun post edileceği adres *@
                             <input type="hidden" name="PostId" value="@Model.PostId">
-                            <input type="hidden" name="Url" value="@Model.Url">    @*details sayfasına geri dönebilmek için post url bilgisi *@
                             <div class="mb-3">
                                 <label for="UserName" class="form-label">User Name</label> 
                                 <input type="text" name="UserName" id="UserName" class="form-control">
@@ -52,7 +51,7 @@
                                 <textarea type="text" name="Text" id="Text" row="3" class="form-control"></textarea>
                             </div>
                             <div class="mb-3">
-                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                                <button id="btnRegisterComment" type="submit" class="btn btn-primary">Kaydet</button>
                             </div>
                         </form>
                     </div>
@@ -65,3 +64,30 @@
         <vc:new-posts></vc:new-posts>
     </div>
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        // yorum ekleme butonuna tıklandığında çalışacak kod bloğu
+    $(document).ready(function () {
+    
+        $("#btnRegisterComment").click(function () {
+             $.ajax({
+                    type: 'POST', 
+                    url: '@Url.Action("AddComment")',
+                    dataType: 'json',
+                    data: {
+                    PostId: $('#PostId').val(),
+                    username: $('#UserName').val(),
+                    Text: $('#Text').val()
+                    },
+                    success: function (yorum) {
+                        console.log('Yorumunuz başarıyla kaydedildi.');
+                    },
+             });
+             return false;
+        });
+    });
+    
+    </script>
+}

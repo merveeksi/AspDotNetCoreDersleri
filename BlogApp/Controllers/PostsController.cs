@@ -46,7 +46,8 @@ public class PostsController : Controller
         
     }
     
-    public IActionResult AddComment(int PostId, string UserName, string Text, string Url)
+    [HttpPost]
+    public JsonResult AddComment(int PostId, string UserName, string Text)
     {
         var entity = new Comment
         {
@@ -56,8 +57,13 @@ public class PostsController : Controller
             PublishedOn = DateTime.Now
         };
         _commentRepository.CreateComment(entity);
-        
-        Redirect("/posts/details/" + Url);    //yorum eklendikten sonra aynı sayfaya yönlendirme
-       return RedirectToRoute("post details", new { url = Url }); 
+
+        return Json(new
+        {
+            UserName,
+            Text,
+            entity.PublishedOn,
+            entity.User.Image
+        });
     }
 }
