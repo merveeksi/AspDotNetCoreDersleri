@@ -25,9 +25,9 @@ public static class SeedData
 
         if (!context.Users.Any())
             context.Users.AddRange(
-                new User { UserName = "Merve Ekşi", Image= "p1.jpg"},
-                new User { UserName = "Alp Giray Üstün", Image = "p2.jpg"},
-                new User { UserName = "Eylül Kırmmızıyüz", Image= "p1.jpg" });
+                new User { UserName = "Merve Ekşi", Name = "Merve Ekşi", Email = "merve@gmail.com", Password = "123merve123", Image= "p1.jpg"},
+                new User { UserName = "Alp Giray Üstün", Name = "Alp Giray Üstün", Email = "alpGiray@gmail.com", Password = "123alp123", Image = "p2.jpg"},
+                new User { UserName = "Eylül Ada Kırmmızıyüz", Name = "Eylül Ada Kırmızıyüz", Email = "eylülAda@gmail.com", Password = "123eylül123", Image= "p1.jpg" });
         context.SaveChanges();
 
         if (!context.Posts.Any())
