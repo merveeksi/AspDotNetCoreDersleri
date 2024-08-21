@@ -22,7 +22,16 @@ public class UsersController : Controller
 
     public IActionResult Login()
     {
+        if(User.Identity.IsAuthenticated) //kullanıcı giriş yapmışsa
+        {
+            return RedirectToAction("Index", "Posts"); //anasayfaya yönlendir
+        }
         return View();
+    }
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme); //cookie temizle
+        return RedirectToAction("Login");
     }
     
     [HttpPost]

@@ -14,6 +14,25 @@
         <a href="/posts" class="navbar-brand">
             <i class="bi bi-code"></i> BlogApp
         </a>
+        
+        <ul class="navbar-nav ms-auto">
+            @if(User.Identity!.IsAuthenticated) @* Kullanıcı giriş yapmışsa *@ @*not null assertion*@
+            {
+                <li class="nav-item">
+                    <a href="#" class="nav-link">@User.Identity.Name</a> @* Kullanıcı adını yazdırıyoruz *@
+                </li>
+                <li class="nav-item">
+                    <a href="/users/logout" class="nav-link">Logout</a> @*uygulamadan çıkış linki*@
+                </li>
+            }
+            else @* Kullanıcı giriş yapmamışsa *@
+            {
+                <li class="nav-item">
+                    <a href="/users/login" class="nav-link">Login</a> @* uygulamaya giriş linki *@
+                </li>
+            }
+            
+        </ul>
     </div>
 </nav>
 <div class="container mt-3">
