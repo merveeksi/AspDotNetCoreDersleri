@@ -3,6 +3,7 @@ using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
 using BlogApp.Entity;
 using BlogApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -73,16 +74,20 @@ public class PostsController : Controller
         });
     }
     
+    [Authorize] //sadece giriş yapmış kullanıcılar erişebilir
     public IActionResult Create() //yeni post oluşturma
     {
         return View();
     }
     
+    [Authorize]
     [HttpPost]
     public IActionResult Create(PostCreateViewModel model) //yeni post oluşturma
     {
         if (ModelState.IsValid)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            
             _postRepository.CreatePost(new Post
             {
                 Title = model.Title,
@@ -96,5 +101,20 @@ public class PostsController : Controller
             return RedirectToAction("Index");
         }
         return View(model);
+    }
+    
+    [Authorize] 
+    public async Task<IActionResult> List() //yazarın yazılarını listeleme
+    {
+        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "");
+        var role = User.FindFirstValue(ClaimTypes.Role);
+
+        var posts = _postRepository.Posts;
+        
+        if(string.IsNullOrEmpty(role)) //rolü var mı kontrol et
+        {
+            posts = posts.Where(i => i.UserId == userId);
+        }
+        return View(await posts.ToListAsync());
     }
 }
