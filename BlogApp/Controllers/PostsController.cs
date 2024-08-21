@@ -72,4 +72,29 @@ public class PostsController : Controller
             avatar
         });
     }
+    
+    public IActionResult Create() //yeni post oluşturma
+    {
+        return View();
+    }
+    
+    [HttpPost]
+    public IActionResult Create(PostCreateViewModel model) //yeni post oluşturma
+    {
+        if (ModelState.IsValid)
+        {
+            _postRepository.CreatePost(new Post
+            {
+                Title = model.Title,
+                Content = model.Content,
+                Url = model.Url,
+                UserId = int.Parse(userId ?? ""),
+                PublishedOn = DateTime.Now,
+                Image = "1.jpg",
+                IsActive = false
+            });
+            return RedirectToAction("Index");
+        }
+        return View(model);
+    }
 }

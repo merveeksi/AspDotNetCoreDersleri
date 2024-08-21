@@ -35,6 +35,7 @@ public static class SeedData
                 new Post
                 {
                     Title = "ASP.NET Core 7.0",
+                    Description = "ASP.NET Core 7.0 hakkında bilgiler",
                     Content = "ASP.NET Core 7.0 hakkında bilgiler",
                     Url ="asp-net-core",
                     IsActive = true,
@@ -57,6 +58,7 @@ public static class SeedData
                 new Post
                 {
                     Title = "Entity Framework Core 7.0",
+                    Description = "Entity Framework Core 7.0 hakkında bilgiler",
                     Content = "Entity Framework Core 7.0 hakkında bilgiler",
                     Url = "entity-framework-core",
                     IsActive = true,
@@ -70,6 +72,7 @@ public static class SeedData
                 new Post
                 {
                     Title = "Blazor",
+                    Description = "Blazor hakkında bilgiler",
                     Content = "Blazor hakkında bilgiler",
                     Url = "blazor",
                     IsActive = true,
@@ -81,6 +84,7 @@ public static class SeedData
                 new Post
                 {
                     Title = "React Dersleri",
+                    Description = "React hakkında bilgiler",
                     Content = "React hakkında bilgiler",
                     Url = "react",
                     IsActive = true,
@@ -92,6 +96,7 @@ public static class SeedData
                 new Post
                 {
                     Title = "Angular",
+                    Description = "Angular hakkında bilgiler",
                     Content = "Angular hakkında bilgiler",
                     Url = "angular",
                     IsActive = true,
@@ -104,6 +109,7 @@ public static class SeedData
                 new Post
                 {
                     Title = "Web Tasarım",
+                    Description = "Web tasarım hakkında bilgiler",
                     Content = "Web tasarım hakkında bilgiler",
                     Url = "web-tasarim",
                     IsActive = true,
