@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
 using BlogApp.Entity;
@@ -48,12 +49,16 @@ public class PostsController : Controller
     }
     
     [HttpPost]
-    public JsonResult AddComment(int PostId, string UserName, string Text)
+    public JsonResult AddComment(int PostId, string Text)
     {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var username = User.FindFirstValue(ClaimTypes.Name);
+        var avatar = User.FindFirstValue(ClaimTypes.UserData);
+        
         var entity = new Comment
         {
             PostId = PostId,
-            User = new User { UserName = UserName, Image = "avatar.jpg"},
+            UserId = int.Parse(userId ?? ""),
             Text = Text,
             PublishedOn = DateTime.Now
         };
@@ -61,10 +66,10 @@ public class PostsController : Controller
 
         return Json(new
         {
-            UserName,
+            username,
             Text,
             entity.PublishedOn,
-            entity.User.Image
+            avatar
         });
     }
 }

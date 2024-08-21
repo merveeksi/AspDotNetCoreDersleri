@@ -47,6 +47,7 @@ public class UsersController : Controller
                userClaims.Add(new Claim(ClaimTypes.NameIdentifier, isUser.UserId.ToString())); //kullanıcı id bilgisi alındı ve claim oluşturuldu
                userClaims.Add(new Claim(ClaimTypes.Name, isUser.UserName ?? "")); //kullanıcı adı bilgisi alındı
                userClaims.Add(new Claim(ClaimTypes.GivenName, isUser.Name ?? "")); 
+                userClaims.Add(new Claim(ClaimTypes.UserData, isUser.Image ?? ""));
                 
                if(isUser.Email == "merve@gmail.com")
                {
