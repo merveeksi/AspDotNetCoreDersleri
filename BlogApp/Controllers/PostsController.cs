@@ -23,8 +23,7 @@ public class PostsController : Controller
     
     public async Task<IActionResult> Index(string tag)
     {
-        var claims = User.Claims;
-        var posts = _postRepository.Posts; 
+        var posts = _postRepository.Posts.Where(i => i.IsActive == true); //aktif olan postları getir
         if (!string.IsNullOrEmpty(tag)) //tag filtreleme
         {
             return View(new PostsViewModel
@@ -116,5 +115,54 @@ public class PostsController : Controller
             posts = posts.Where(i => i.UserId == userId);
         }
         return View(await posts.ToListAsync());
+    }
+    
+    [Authorize]
+    public IActionResult Edit(int? id) //post düzenleme
+    {
+        if(id == null)
+        {
+            return NotFound();
+        }
+        var post = _postRepository.Posts.FirstOrDefault(i => i.PostId== id);
+        if(post == null)
+        {
+            return NotFound(); //post yoksa 404 hatası ver
+        }
+        return View(new PostCreateViewModel
+        {
+            PostId = post.PostId,
+            Title = post.Title,
+            Description = post.Description,
+            Content = post.Content,
+            Url = post.Url,
+            IsActive = post.IsActive
+        });
+    }
+    
+    [Authorize]
+    [HttpPost]
+    public IActionResult Edit(PostCreateViewModel model) //post düzenleme
+    {
+        if (ModelState.IsValid)
+        {
+            var entityToUpdate = new Post
+            {
+                PostId = model.PostId,
+                Title = model.Title,
+                Description = model.Description,
+                Content = model.Content,
+                Url = model.Url
+            };
+
+            if (User.FindFirstValue(ClaimTypes.Role) == "admin")
+            {
+                entityToUpdate.IsActive = model.IsActive;
+            }
+            
+            _postRepository.EditPost(entityToUpdate);
+            return RedirectToAction("List");
+        }
+        return View(model);
     }
 }

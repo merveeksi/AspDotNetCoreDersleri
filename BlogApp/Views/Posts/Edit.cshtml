@@ -1,0 +1,43 @@
+@using System.Security.Claims
+@model PostCreateViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="bg-white p-4"> @*arka plan beyaz*@
+            <h1>Post Edit</h1>
+            <form asp-action="Edit" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+                <input type="hidden" asp-for="PostId">
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label"></label>
+                    <input asp-for="Title" class="form-control"/>
+                    <span asp-validation-for="Title" class="text-danger"></span> @*hata mesajı*@
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <input asp-for="Description" class="form-control"/>
+                    <span asp-validation-for="Description" class="text-danger"></span> @*hata mesajı*@
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Url" class="form-label"></label>
+                    <input asp-for="Url" class="form-control"/>
+                    <span asp-validation-for="Url" class="text-danger"></span> @*hata mesajı*@
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Content" class="form-label"></label>
+                    <textarea asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span> @*hata mesajı*@
+                </div>
+                @if(User.FindFirstValue(ClaimTypes.Role) == "admin")
+                {
+                    <div class="from check mb-3">
+                        <input asp-for="IsActive" class="form-check-input">
+                        <label asp-for="IsActive" class="form-check-label"></label>
+                        <span asp-validation-for="IsActive" class="text-danger"></span> @*hata mesajı*@
+                    </div>
+                }
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>

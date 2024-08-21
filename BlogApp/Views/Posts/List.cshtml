@@ -4,13 +4,12 @@
     <div class="col-12">
         <h2>Post List</h2>
         <a href="/posts/create" class="btn btn-primary">New Post</a>
-        <hr/>
-        <table class="table tabled-bordered">
+        <table class="table tabled-bordered mt-3">
             <thread>
                 <tr>
                     <th style="width: 200px">Image</th>
-                    <th>Id</th>
                     <th>Title</th>
+                    <th>Is Active</th>
                     <th style="width: 125px"></th>
                 </tr>
             </thread>
@@ -24,7 +23,7 @@
                     <td>@item.Title</td>
                     <td>@item.IsActive</td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="/posts/edit/@item.PostId" class="btn btn-sm btn-primary">Edit</a> 
                         <a href="#" class="btn btn-sm btn-danger">Delete</a>
                     </td>
                 </tr>

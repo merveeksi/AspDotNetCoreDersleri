@@ -20,4 +20,20 @@ public class EfPostRepository: IPostRepository
                 _context.Posts.Add(post); //post eklemek için
                 _context.SaveChanges(); //ekleme işlemini kaydetmek için
         }
+
+        public void EditPost(Post post)
+        {
+                var entity = _context.Posts.FirstOrDefault(i => i.PostId == post.PostId); //post id'sine göre postu bul
+
+                if (entity != null)
+                {
+                        entity.Title = post.Title;
+                        entity.Description = post.Description;
+                        entity.Content = post.Content;
+                        entity.Url = post.Url;
+                        entity.IsActive = post.IsActive;
+                        
+                        _context.SaveChanges(); //değişiklikleri kaydet
+                }
+        }
 }
