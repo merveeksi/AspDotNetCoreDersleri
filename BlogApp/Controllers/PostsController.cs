@@ -41,6 +41,7 @@ public class PostsController : Controller
     {
         return View (await _postRepository
                 .Posts
+                .Include(x => x.User) //yazarı getir //post'un user'ını getir
                 .Include(x => x.Tags) //tag'leri getir
                 .Include(x=>x.Comments) //yorumları getir
                 .ThenInclude(x=>x.User) //yorumun kullanıcısını getir

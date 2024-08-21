@@ -106,4 +106,24 @@ public class UsersController : Controller
        
         return View(model);
     }
+    
+    public IActionResult Profile(string username)
+    {
+        if(string.IsNullOrEmpty(username))
+        {
+            return NotFound();
+        }
+        var user = _userRepository
+            .Users
+            .Include(x => x.Posts) //kullanıcının yazıları
+            .Include(x => x.Comments) //kullanıcının yorumları
+            .ThenInclude(x => x.Post) //yorumun yazısı
+            .FirstOrDefault(x => x.UserName == username);
+        
+        if (user == null)
+        {
+            return NotFound();
+        }
+        return View(user);
+    }
 }

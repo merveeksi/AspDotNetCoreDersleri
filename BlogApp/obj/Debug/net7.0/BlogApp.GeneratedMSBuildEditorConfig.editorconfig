@@ -16,12 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Posts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Posts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Posts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Posts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Posts/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Shared/Components/NewPosts/Default.cshtml]
@@ -38,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Users/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Users/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/pc/Desktop/AspDotNetCoreDersleri/BlogApp/Views/Users/Register.cshtml]
