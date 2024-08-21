@@ -13,12 +13,14 @@ public class PostsController : Controller
 {
     private IPostRepository _postRepository;
     private ICommentRepository _commentRepository;
+    private ITagRepository _tagRepository;
     
     //Inject yöntemiyle nesne oluşturma
-    public PostsController(IPostRepository postRepository, ICommentRepository commentRepository)
+    public PostsController(IPostRepository postRepository, ICommentRepository commentRepository, ITagRepository tagRepository)
     {
         _postRepository = postRepository;
         _commentRepository = commentRepository;
+        _tagRepository = tagRepository;
     }
     
     public async Task<IActionResult> Index(string tag)
@@ -125,11 +127,12 @@ public class PostsController : Controller
         {
             return NotFound();
         }
-        var post = _postRepository.Posts.FirstOrDefault(i => i.PostId== id);
+        var post = _postRepository.Posts.Include(i => i.Tags).FirstOrDefault(i => i.PostId== id); //veritabanından postu getir
         if(post == null)
         {
             return NotFound(); //post yoksa 404 hatası ver
         }
+        ViewBag.Tags = _tagRepository.Tags.ToList(); //viewbag aracılığıyla sayfaya gönderiyoruz
         return View(new PostCreateViewModel
         {
             PostId = post.PostId,
@@ -137,7 +140,8 @@ public class PostsController : Controller
             Description = post.Description,
             Content = post.Content,
             Url = post.Url,
-            IsActive = post.IsActive
+            IsActive = post.IsActive,
+            Tags = post.Tags
         });
     }
     
