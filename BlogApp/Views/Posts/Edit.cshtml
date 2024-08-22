@@ -50,12 +50,10 @@
                        name="tagIds"
                        type="checkbox"
                        value="@tag.TagId"
-                       @(Model.Tags.Any(i => i.TagId == tag.TagId) ? "checked" : ""))> @*var mı?*@
-                       
                        @* id'yi tag'ın Id'sine göre belirle*@
-                       id="tag_@tag.TagId" 
-                       @(Model.Tags.Any(i => i.TagId == tag.TagId) ? "checked" : "")
-                >
+                       id="tag_@tag.TagId"
+                       @(Model.Tags.Any(i => i.TagId == tag.TagId) ? "checked" : ""))> @*var mı?*@
+                
                 <label class="form-check-label" for="tag_@tag.TagId">
                     @tag.Text
                 </label>
